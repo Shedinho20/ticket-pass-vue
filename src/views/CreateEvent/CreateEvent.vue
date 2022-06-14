@@ -10,7 +10,7 @@
           label="Start Date"
           :error="state.formError.startDate" />
         <Gap width="30px" />
-        <InputField type="date" v-model="state.formData.endDate" label="Start Date" :error="state.formError.endDate" />
+        <InputField type="date" v-model="state.formData.endDate" label="End Date" :error="state.formError.endDate" />
       </div>
       <Gap height="10px" />
       <TextArea rows="10" label="Event description" v-model="state.formData.desc" :error="state.formError.desc" />
@@ -37,6 +37,9 @@ import FileInputField from '../../components/FileInputField/FileInputField.vue';
 import { reactive } from 'vue';
 import { validateForm, createEventValidators } from '../../common/validator';
 import { useCreateEventMutation } from '../../network/Mutations/useCreatEventMutation';
+import { useToast } from 'vue-toast-notification';
+
+const toast = useToast();
 
 const state = reactive({
   formData: {
@@ -62,6 +65,15 @@ const onSubmit = () => {
 
   state.formError = errors;
   if (!isValid) {
+    return;
+  }
+
+  if (new Date(state.formData.startDate) >= new Date(state.formData.endDate)) {
+    toast.open({
+      message: `The end date must be greater than start date`,
+      type: 'warning',
+      position: 'top-right'
+    });
     return;
   }
 
