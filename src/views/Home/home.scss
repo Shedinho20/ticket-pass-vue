@@ -1,0 +1,19 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 2rem;
+}
+
+.homeContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pagination {
+  width: 100%;
+}

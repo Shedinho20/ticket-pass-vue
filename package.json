@@ -1,0 +1,27 @@
+{
+  "name": "pakage.json",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "vue": "^3.2.25",
+    "vue-inline-svg": "^3.1.0",
+    "vue-query": "^1.25.0",
+    "vue-router": "^4.0.16",
+    "vue-svg-loader": "^0.16.0",
+    "vue-toast-notification": "^3.0.4",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "eslint": "^8.17.0",
+    "sass": "^1.52.3",
+    "vite": "^2.9.9",
+    "vue-eslint-parser": "^9.0.2"
+  }
+}

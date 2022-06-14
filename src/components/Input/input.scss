@@ -1,0 +1,20 @@
+.containerInput {
+  width: 100%;
+  position: relative;
+  .input {
+    padding: 1em 1.5em;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 30px;
+    width: 100%;
+
+    &:hover {
+      border-color: var(--color-main-green);
+    }
+
+    &:focus {
+      border-color: var(--color-main-green);
+    }
+  }
+}

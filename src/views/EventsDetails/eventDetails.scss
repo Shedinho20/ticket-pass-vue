@@ -1,0 +1,35 @@
+.eventDetailsContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  .imgContainer {
+    height: 50vh;
+    max-height: 600px;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+.content {
+  max-width: 800px;
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-light-gray);
+    letter-spacing: 0.05rem;
+  }
+}
